@@ -7,9 +7,9 @@ public class Main {
         var name = getName();
         var text = "Hello " + name + "!";
         var blockSize = text.length();
-        displaySquare(blockSize);
+        displayRectangle(blockSize, 3);
         System.out.println(text);
-        displaySquare(blockSize);
+        displayRectangle(blockSize, 3);
     }
 
     private static String getName() {
@@ -22,9 +22,9 @@ public class Main {
         return name;
     }
 
-    private static void displaySquare(int size) {
-        for (int row = 0; row < size; row++) {
-            for (int column = 0; column < size; column++) System.out.print("*");
+    private static void displayRectangle(int width, int height) {
+        for (int row = 0; row < height; row++) {
+            for (int column = 0; column < width; column++) System.out.print("*");
             System.out.println();
         }
     }
